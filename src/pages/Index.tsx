@@ -254,7 +254,7 @@ export default function Index() {
       </Section>
 
       {/* ── PRODUCTS ── */}
-      <Section id="products" className="py-20 md:py-28 bg-[#f5f0e8]">
+      <Section id="products" className="py-10 md:py-14 bg-[#f5f0e8]">
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           {/* Header — как на буклете */}
           <div className="mb-8">
@@ -424,7 +424,7 @@ export default function Index() {
                 {markets.map(m => (
                   <div key={m.region} className="border border-wheat/35 rounded-sm p-4 hover-lift bg-cream-light">
                     <div className="flex items-center gap-2 mb-2">
-                      <Icon name={m.icon as IconName} size={15} className="text-lime" fallback="Globe" />
+                      <Icon name={m.icon as IconName} size={15} style={{ color: "#e6af48" }} fallback="Globe" />
                       <div className="font-semibold text-forest text-xs">{m.region}</div>
                     </div>
                     <div className="text-forest/50 text-[11px] leading-relaxed">{m.countries}</div>
@@ -438,7 +438,7 @@ export default function Index() {
                 {packagingTypes.map(pt => (
                   <div key={pt.title} className="bg-cream-dark rounded-sm p-4 hover-lift border border-wheat/20">
                     <div className="w-9 h-9 bg-forest rounded-sm flex items-center justify-center mb-3">
-                      <Icon name={pt.icon as IconName} size={16} className="text-lime" fallback="Package" />
+                      <Icon name={pt.icon as IconName} size={16} style={{ color: "#e6af48" }} fallback="Package" />
                     </div>
                     <div className="font-semibold text-forest text-xs mb-1">{pt.title}</div>
                     <div className="text-forest/55 text-[11px] leading-relaxed">{pt.desc}</div>
@@ -456,8 +456,8 @@ export default function Index() {
                 { icon: "Handshake", title: "Long-term Partnership", desc: "We grow with our clients around the world" },
               ].map(item => (
                 <div key={item.title} className="p-8 flex flex-col items-center text-center gap-3">
-                  <div className="w-12 h-12 border border-lime/35 rounded-full flex items-center justify-center">
-                    <Icon name={item.icon as IconName} size={22} className="text-lime" fallback="Check" />
+                  <div className="w-12 h-12 border border-[#e6af48]/40 rounded-full flex items-center justify-center">
+                    <Icon name={item.icon as IconName} size={22} style={{ color: "#e6af48" }} fallback="Check" />
                   </div>
                   <div className="font-playfair text-lg font-semibold text-cream">{item.title}</div>
                   <div className="text-cream/50 text-xs leading-relaxed">{item.desc}</div>
