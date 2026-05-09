@@ -92,6 +92,7 @@ export default function Index() {
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#products", label: "Products" },
+    { href: "#organic", label: "Organic" },
     { href: "#export", label: "Export" },
     { href: "#certifications", label: "Certifications" },
     { href: "#private-label", label: "Private Label" },
@@ -148,8 +149,8 @@ export default function Index() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{ backgroundImage: `url(${HERO_BG})`, transform: "scale(1.05)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/70 via-forest/35 to-forest/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#e6af48]/20 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pb-16 md:pb-24 pt-28 md:pt-36">
           <div className="max-w-3xl">
@@ -289,6 +290,100 @@ export default function Index() {
             <a href="#contact" className="btn-primary whitespace-nowrap text-xs py-3 px-5">
               Request Specifications
             </a>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── ORGANIC & CONVENTIONAL ── */}
+      <Section id="organic" className="py-20 md:py-28 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-4">
+            <SectionLabel>Farming Standards</SectionLabel>
+            <h2 className="font-playfair text-4xl md:text-5xl font-semibold text-forest leading-tight">Organic & Conventional</h2>
+          </div>
+          <div className="section-divider mb-14 max-w-xs mx-auto" />
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Organic */}
+            <div className="border-2 border-lime/40 rounded-sm overflow-hidden">
+              <div className="bg-lime px-7 py-5 flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <Icon name="Leaf" size={20} className="text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-playfair text-xl font-semibold">Organic</div>
+                  <div className="text-white/75 text-xs tracking-wider uppercase">EU Certified</div>
+                </div>
+                <div className="ml-auto bg-white/15 border border-white/30 text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-sm">
+                  ECOCERT
+                </div>
+              </div>
+              <div className="p-7 bg-lime/4">
+                <p className="text-forest/70 text-sm leading-relaxed mb-6">
+                  Our organic line is grown without synthetic pesticides or fertilizers, certified to EU Organic standards. Ideal for health food brands, premium retail, and eco-conscious markets.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "EU Organic Certified (ECOCERT standard)",
+                    "No synthetic pesticides or GMO",
+                    "Full traceability from field to product",
+                    "Available: Buckwheat, Oat Flakes, Flaxseed, Green Buckwheat, Buckwheat Flour",
+                  ].map(item => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="w-4 h-4 rounded-full bg-lime flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Check" size={9} className="text-white" />
+                      </div>
+                      <span className="text-forest/75 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Conventional */}
+            <div className="border-2 border-wheat/40 rounded-sm overflow-hidden">
+              <div className="bg-forest px-7 py-5 flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                  <Icon name="Wheat" size={20} className="text-wheat-light" fallback="Package" />
+                </div>
+                <div>
+                  <div className="text-cream font-playfair text-xl font-semibold">Conventional</div>
+                  <div className="text-cream/60 text-xs tracking-wider uppercase">Standard Grade</div>
+                </div>
+                <div className="ml-auto bg-cream/10 border border-cream/20 text-cream text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-sm">
+                  HACCP
+                </div>
+              </div>
+              <div className="p-7 bg-cream-dark">
+                <p className="text-forest/70 text-sm leading-relaxed mb-6">
+                  Our conventional line meets strict food safety standards with consistent quality and competitive pricing. Perfect for large-volume importers, food manufacturers and wholesalers.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "HACCP & ISO 22000 compliant",
+                    "Consistent quality, every shipment",
+                    "Competitive pricing for large volumes",
+                    "Available: All products — Wheat, Rye, Barley, Lentils, Yellow Peas and more",
+                  ].map(item => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="w-4 h-4 rounded-full bg-forest flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Check" size={9} className="text-lime" />
+                      </div>
+                      <span className="text-forest/75 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="bg-forest rounded-sm p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="font-playfair text-xl font-semibold text-cream mb-2">Not sure which option fits your needs?</h3>
+              <p className="text-cream/55 text-sm">We'll help you choose the right grade, packaging and certification for your market.</p>
+            </div>
+            <a href="#contact" className="btn-lime whitespace-nowrap">Ask Our Team</a>
           </div>
         </div>
       </Section>
