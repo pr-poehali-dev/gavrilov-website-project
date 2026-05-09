@@ -163,18 +163,18 @@ export default function Index() {
               <em className="text-wheat-light not-italic">Grain Products</em><br />
               for the World
             </h1>
-            <p className="text-cream/75 text-base md:text-lg font-light leading-relaxed mb-4 animate-fade-in animate-delay-300 max-w-lg">
+            <p className="text-cream text-base md:text-lg font-semibold leading-relaxed mb-4 animate-fade-in animate-delay-300 max-w-lg text-shadow-sm">
               Premium quality grains, pulses and oilseeds — from Smolensk Region fields to your market.
             </p>
             <div className="flex items-center gap-3 mb-10 animate-fade-in animate-delay-400">
               {["Premium Quality", "Sustainable", "Traceable"].map((t, i) => (
-                <span key={t} className="text-lime text-xs font-semibold tracking-widest uppercase">
-                  {t}{i < 2 && <span className="text-cream/30 ml-3">·</span>}
+                <span key={t} className="text-cream font-bold text-xs tracking-widest uppercase text-shadow-sm">
+                  {t}{i < 2 && <span className="text-[#e6af48] ml-3">·</span>}
                 </span>
               ))}
             </div>
             <div className="flex flex-wrap gap-4 animate-fade-in animate-delay-500">
-              <a href="#products" className="btn-lime">View Our Products</a>
+              <a href="#products" className="btn-primary">View Our Products</a>
               <a href="#contact" className="btn-outline-white">Request a Quote</a>
             </div>
           </div>
