@@ -177,6 +177,15 @@ export default function Index() {
               <a href="#products" className="btn-primary">View Our Products</a>
               <a href="#contact" className="btn-outline-white">Request a Quote</a>
             </div>
+
+            {/* EU Organic badge */}
+            <div className="mt-8 animate-fade-in animate-delay-600 inline-flex items-center gap-3 bg-black/30 backdrop-blur-sm border border-cream/15 rounded-sm px-4 py-3">
+              <img src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png" alt="EU Organic Certified" className="h-10 w-10 object-contain" />
+              <div>
+                <div className="text-cream font-bold text-xs tracking-widest uppercase">EU Organic Certified</div>
+                <div className="text-cream/55 text-[10px]">ECOCERT standard</div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-14 grid grid-cols-3 max-w-md animate-fade-in animate-delay-600">
@@ -501,19 +510,37 @@ export default function Index() {
                 ))}
               </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {certBadges.map(cert => (
-                <div
-                  key={cert.label}
-                  className="border-2 rounded-sm p-6 flex flex-col items-center text-center gap-3 hover-lift bg-cream"
-                  style={{ borderColor: cert.color + "35" }}
-                >
-                  <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ background: cert.color + "12" }}>
-                    <Icon name={cert.icon as IconName} size={26} style={{ color: cert.color }} fallback="Award" />
+            <div className="flex flex-col gap-4">
+              {/* EU Organic — главная карточка с реальным лого */}
+              <div className="bg-lime rounded-sm p-5 flex items-center gap-5 hover-lift">
+                <img
+                  src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png"
+                  alt="EU Organic Certified"
+                  className="h-20 w-20 object-contain flex-shrink-0"
+                />
+                <div>
+                  <div className="font-playfair text-xl font-bold text-white mb-1">EU Organic Certified</div>
+                  <div className="text-white/80 text-xs leading-relaxed">
+                    Certified to EU Organic standards (ECOCERT).<br />
+                    Healthy products — healthy planet.
                   </div>
-                  <div className="font-semibold text-forest text-sm">{cert.label}</div>
                 </div>
-              ))}
+              </div>
+              {/* Остальные сертификаты */}
+              <div className="grid grid-cols-3 gap-3">
+                {certBadges.slice(1).map(cert => (
+                  <div
+                    key={cert.label}
+                    className="border-2 rounded-sm p-4 flex flex-col items-center text-center gap-2 hover-lift bg-cream"
+                    style={{ borderColor: cert.color + "35" }}
+                  >
+                    <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ background: cert.color + "12" }}>
+                      <Icon name={cert.icon as IconName} size={22} style={{ color: cert.color }} fallback="Award" />
+                    </div>
+                    <div className="font-semibold text-forest text-xs">{cert.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
