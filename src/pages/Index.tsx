@@ -479,8 +479,8 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-lime text-white text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 mb-6">
-                <Icon name="ShieldCheck" size={12} />
+              <div className="inline-flex items-center gap-2 bg-forest text-cream text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 mb-6 border-l-4 border-lime">
+                <Icon name="ShieldCheck" size={12} className="text-lime" />
                 Certified Organic · Healthy Products – Healthy Planet
               </div>
               <ul className="space-y-4">
@@ -493,10 +493,10 @@ export default function Index() {
                   "Lab-tested every shipment",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-lime flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon name="Check" size={10} className="text-white" />
+                    <div className="w-5 h-5 rounded-sm bg-forest flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon name="Check" size={10} className="text-lime" />
                     </div>
-                    <span className="text-forest/75 text-sm">{item}</span>
+                    <span className="text-forest font-medium text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
