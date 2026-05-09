@@ -9,16 +9,16 @@ const GRAINS_IMG = "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14
 const FACILITY_IMG = "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/2a9a29d2-786d-4b05-b45f-f7f339c77760.jpg";
 
 const products = [
-  { name: "Steamed Buckwheat", emoji: "🟤", desc: "Premium processed, ready for retail", organic: true },
-  { name: "Green Buckwheat", emoji: "🟢", desc: "Raw, sproutable, full nutrition", organic: true },
-  { name: "Buckwheat Flour", emoji: "⚪", desc: "Fine milled, gluten-free baking", organic: true },
-  { name: "Oat Flakes", emoji: "🌾", desc: "Rolled & instant grades available", organic: true },
-  { name: "Flaxseed", emoji: "🔵", desc: "Brown & golden, cold-press quality", organic: true },
-  { name: "Red Lentils", emoji: "🔴", desc: "Split & whole, export standard", organic: false },
-  { name: "Yellow Peas", emoji: "🟡", desc: "Whole & split, food grade", organic: false },
-  { name: "Wheat", emoji: "🌾", desc: "Milling & feed grades, bulk supply", organic: false },
-  { name: "Rye", emoji: "🟫", desc: "Whole grain, traditional varieties", organic: false },
-  { name: "Barley", emoji: "🟡", desc: "Hulled & pearl, malting grades", organic: false },
+  { name: "Steamed Buckwheat", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/39be89c7-97ce-4972-8a6f-5b680129eb24.jpg", organic: true },
+  { name: "Green Buckwheat", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/d14bdcaa-59d3-49b3-9365-a5970f955661.jpg", organic: true },
+  { name: "Buckwheat Flour", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/69be0396-6fec-4c01-a1a4-9a7b11a8bfdd.jpg", organic: true },
+  { name: "Oat Flakes", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/0c4a7759-b87c-454a-9546-32c08300311f.jpg", organic: true },
+  { name: "Flaxseed", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/f75cb1fc-5d43-4451-886d-597192a0aac4.jpg", organic: true },
+  { name: "Red Lentils", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/47946db3-87c3-4caf-8bfd-8aeed09c40dc.jpg", organic: false },
+  { name: "Yellow Peas", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/e63a336a-79aa-4aa9-b147-031bad422833.jpg", organic: false },
+  { name: "Wheat", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/79d6ea66-ec81-4702-ade0-9a13670c9b8c.jpg", organic: false },
+  { name: "Rye", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/cb320390-a60d-45cb-8547-95d1e13b9dd4.jpg", organic: false },
+  { name: "Barley", photo: "https://cdn.poehali.dev/projects/165ba907-5691-4ff9-8428-d14dc85f6142/files/61e617b9-3489-4bb8-933f-400a64d8933a.jpg", organic: false },
 ];
 
 const markets = [
@@ -254,41 +254,58 @@ export default function Index() {
       </Section>
 
       {/* ── PRODUCTS ── */}
-      <Section id="products" className="py-20 md:py-28 bg-forest-pattern">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-4">
-            <div className="inline-block text-[10px] font-semibold tracking-[0.3em] uppercase text-lime/80 mb-3">GAVRILOV FOODS</div>
-            <h2 className="font-playfair text-4xl md:text-5xl font-semibold text-cream leading-tight">Our Products</h2>
+      <Section id="products" className="py-20 md:py-28 bg-[#f5f0e8]">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
+          {/* Header — как на буклете */}
+          <div className="mb-8">
+            <h2 className="font-montserrat text-2xl md:text-3xl font-extrabold text-forest uppercase tracking-wide flex items-center gap-2 mb-1">
+              Our Products <Icon name="Leaf" size={22} className="text-lime" />
+            </h2>
+            <p className="text-forest/60 text-sm">Wide range of grains, pulses and oilseeds for global markets</p>
+            <div className="mt-3 h-[2px] w-16 bg-lime" />
           </div>
-          <p className="text-center text-cream/60 mb-12 max-w-md mx-auto text-sm leading-relaxed">
-            Wide range of grains, pulses and oilseeds for global markets. Organic & Conventional options available.
-          </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+          {/* Grid 3 col — как в буклете */}
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
             {products.map((p) => (
-              <div key={p.name} className="product-card rounded-sm p-4 md:p-5 flex flex-col items-center text-center">
-                <div className="text-3xl md:text-4xl mb-3">{p.emoji}</div>
-                <div className="font-playfair font-semibold text-forest text-sm leading-tight mb-2">{p.name}</div>
-                <div className="text-forest/50 text-xs leading-snug mb-3">{p.desc}</div>
-                {p.organic && (
-                  <span className="inline-flex items-center gap-1 bg-lime/15 text-lime text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-sm">
-                    <Icon name="Leaf" size={8} /> Organic
-                  </span>
-                )}
+              <div
+                key={p.name}
+                className="flex flex-col items-center group cursor-pointer"
+              >
+                <div className="w-full aspect-square rounded-lg overflow-hidden border border-[#e0d5c5] bg-[#ede8df] shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                  <img
+                    src={p.photo}
+                    alt={p.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="mt-2 text-center">
+                  <div className="font-montserrat font-extrabold text-forest text-[11px] md:text-xs tracking-wider uppercase leading-tight">
+                    {p.name}
+                  </div>
+                  {p.organic && (
+                    <div className="mt-1 inline-flex items-center gap-1 text-lime text-[9px] font-bold tracking-widest uppercase">
+                      <Icon name="Leaf" size={7} /> organic
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 bg-lime rounded-sm p-5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 text-white">
-              <Icon name="Leaf" size={20} />
-              <div>
-                <div className="font-semibold text-sm tracking-wide">ORGANIC & CONVENTIONAL OPTIONS AVAILABLE</div>
-                <div className="text-white/75 text-xs">We meet your needs with flexibility and care</div>
-              </div>
+          {/* Bottom banner — как на буклете */}
+          <div className="mt-8 bg-forest rounded-sm px-5 py-4 flex items-center gap-3">
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
+              <Icon name="Leaf" size={20} className="text-lime" />
             </div>
-            <a href="#contact" className="btn-primary whitespace-nowrap text-xs py-3 px-5">
-              Request Specifications
+            <div>
+              <div className="text-cream font-montserrat font-bold text-xs tracking-wider uppercase">
+                Organic & Conventional Options Available
+              </div>
+              <div className="text-cream/60 text-[11px]">We meet your needs with flexibility and care</div>
+            </div>
+            <a href="#contact" className="ml-auto btn-lime whitespace-nowrap text-[11px] py-2 px-4">
+              Get Quote
             </a>
           </div>
         </div>
