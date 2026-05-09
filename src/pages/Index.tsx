@@ -178,12 +178,13 @@ export default function Index() {
               <a href="#contact" className="btn-outline-white">Request a Quote</a>
             </div>
 
-            {/* EU Organic badge */}
-            <div className="mt-8 animate-fade-in animate-delay-600 inline-flex items-center gap-3 bg-black/30 backdrop-blur-sm border border-cream/15 rounded-sm px-4 py-3">
-              <img src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png" alt="EU Organic Certified" className="h-10 w-10 object-contain" />
-              <div>
-                <div className="text-cream font-bold text-xs tracking-widest uppercase">EU Organic Certified</div>
-                <div className="text-cream/55 text-[10px]">ECOCERT standard</div>
+            {/* EU Organic badge — как на буклете */}
+            <div className="mt-8 animate-fade-in animate-delay-600 inline-flex items-center gap-0 overflow-hidden rounded-sm shadow-lg">
+              <div className="bg-lime flex items-center justify-center px-3 py-2.5">
+                <img src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png" alt="EU Organic" className="h-9 w-9 object-contain" />
+              </div>
+              <div className="bg-white px-4 py-2.5">
+                <div className="text-forest font-extrabold text-[11px] tracking-[0.15em] uppercase leading-tight">EU Organic<br />Certified</div>
               </div>
             </div>
           </div>
@@ -511,19 +512,17 @@ export default function Index() {
               </ul>
             </div>
             <div className="flex flex-col gap-4">
-              {/* EU Organic — главная карточка с реальным лого */}
-              <div className="bg-lime rounded-sm p-5 flex items-center gap-5 hover-lift">
-                <img
-                  src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png"
-                  alt="EU Organic Certified"
-                  className="h-20 w-20 object-contain flex-shrink-0"
-                />
-                <div>
-                  <div className="font-playfair text-xl font-bold text-white mb-1">EU Organic Certified</div>
-                  <div className="text-white/80 text-xs leading-relaxed">
-                    Certified to EU Organic standards (ECOCERT).<br />
-                    Healthy products — healthy planet.
-                  </div>
+              {/* EU Organic — карточка как на буклете */}
+              <div className="inline-flex items-center gap-0 overflow-hidden rounded-sm shadow-md hover-lift self-start">
+                <div className="bg-lime flex items-center justify-center px-5 py-4">
+                  <img
+                    src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png"
+                    alt="EU Organic Certified"
+                    className="h-14 w-14 object-contain"
+                  />
+                </div>
+                <div className="bg-white px-5 py-4">
+                  <div className="text-forest font-extrabold text-sm tracking-[0.12em] uppercase leading-snug">EU Organic<br />Certified</div>
                 </div>
               </div>
               {/* Остальные сертификаты */}
