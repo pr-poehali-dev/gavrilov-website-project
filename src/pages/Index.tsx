@@ -178,14 +178,7 @@ export default function Index() {
               <a href="#contact" className="btn-outline-white">Request a Quote</a>
             </div>
 
-            {/* EU Organic badge */}
-            <div className="mt-8 animate-fade-in animate-delay-600 inline-flex items-center gap-3 bg-black/30 backdrop-blur-sm border border-cream/15 rounded-sm px-4 py-3">
-              <img src="https://cdn.poehali.dev/files/d06a77ac-0764-4f4d-824f-a2021be591ff.png" alt="EU Organic Certified" className="h-10 w-10 object-contain" />
-              <div>
-                <div className="text-cream font-bold text-xs tracking-widest uppercase">EU Organic Certified</div>
-                <div className="text-cream/55 text-[10px]">ECOCERT standard</div>
-              </div>
-            </div>
+
           </div>
 
           <div className="mt-14 grid grid-cols-3 max-w-md animate-fade-in animate-delay-600">
